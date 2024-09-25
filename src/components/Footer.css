@@ -1,0 +1,17 @@
+/* Footer.css */
+
+.footer {
+    background-color: #f1f1f1; /* Light gray background */
+    padding: 20px; /* Padding */
+    text-align: center; /* Center text */
+}
+
+.footer-container {
+    max-width: 800px; /* Maximum width for footer content */
+    margin: auto; /* Center footer */
+}
+
+.footer p {
+    margin: 0; /* Remove default margin */
+    color: #333; /* Darker text color */
+}

@@ -1,0 +1,52 @@
+.menu-container {
+    max-width: 800px; /* Increased width for more space */
+    margin: 40px auto; /* Increased margin for better positioning */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners */
+    background-color: #ffffff; /* White background for clarity */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-item {
+    margin-bottom: 30px; /* Increased margin for more separation */
+    padding: 15px; /* Increased padding for more space around items */
+    border-bottom: 1px solid #eaeaea; /* Light border for separation */
+    display: flex; /* Use flex to align image and text */
+    align-items: flex-start; /* Align items to the top */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.menu-item:hover {
+    background-color: #f1f1f1; /* Light grey background on hover */
+}
+
+.menu-image {
+    width: 100px; /* Adjusted width for better proportion */
+    height: 100px; /* Adjusted height for better proportion */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 8px; /* Rounded corners for images */
+    object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+}
+
+.menu-item h3 {
+    margin: 0;
+    font-size: 1.5em; /* Larger font size for dish names */
+    color: #333;
+}
+
+.menu-item p {
+    margin: 5px 0; /* Consistent margin for paragraphs */
+    color: #666; /* Softer color for descriptions */
+}
+
+.menu-price {
+    font-weight: bold;
+    font-size: 1.2em; /* Larger font size for prices */
+    color: #28a745; /* Green color for prices */
+}

@@ -1,33 +1,52 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // Importa Link se stai usando react-router per la navigazione
-import './Home.css'; // Importa eventuale file di stile
+import React, { useState, useEffect } from 'react';
+import './Home.css'; // Import the CSS file for styling
 
 const Home = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const images = [
+        {
+            src: "pizza.jpg",
+            caption: "Offerta 1: Un delizioso piatto di pasta per iniziare la tua esperienza!"
+        },
+        {
+            src: "drink.jpg",
+            caption: "Offerta 2: Scopri la nostra pizza fresca e gustosa!"
+        },
+        {
+            src: "burger.jpg",
+            caption: "Offerta 3: Non perdere il nostro delizioso dessert!"
+        }
+    ];
+
+    // Funzione per avanzare automaticamente all'immagine successiva
+    const nextImage = () => {
+        setCurrentIndex((currentIndex + 1) % images.length);
+    };
+
+    // Effetto per auto-play del carosello
+    useEffect(() => {
+        const interval = setInterval(nextImage, 3000); // Cambia immagine ogni 3 secondi
+        return () => clearInterval(interval); // Pulisci l'intervallo quando il componente viene smontato
+    }, [currentIndex]);
+
     return (
-        <div className="home-container" style={{ textAlign: 'center', padding: '20px' }}>
+        <div className="home-container">
             <h1>Benvenuto nel Ristorante!</h1>
             <p>Scopri i nostri piatti deliziosi e goditi un'esperienza culinaria unica.</p>
             
-            <img 
-                src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg0NzN8MHwxfGFsbHwxfHx8fHx8fHwxNjA2NzY2NTEz&ixlib=rb-1.2.1&q=80&w=400" 
-                alt="Ristorante" 
-                style={{ width: '300px', height: 'auto', borderRadius: '10px', margin: '20px 0' }} 
-            />
-
-            <div className="action-links" style={{ margin: '20px 0' }}>
-                <Link to="/register">
-                    <button style={{ padding: '10px 20px', margin: '5px' }}>Registrati</button>
-                </Link>
-                <Link to="/login">
-                    <button style={{ padding: '10px 20px', margin: '5px' }}>Login</button>
-                </Link>
+            {/* Carousel senza controlli manuali */}
+            <div className="carousel">
+                <img
+                    src={images[currentIndex].src}
+                    alt={`Slide ${currentIndex + 1}`}
+                    className="carousel-image"
+                />
+                {/* Mostra il testo della didascalia se necessario */}
+                {/* <p className="carousel-caption">{images[currentIndex].caption}</p> */}
             </div>
-
-            <footer style={{ marginTop: '40px', fontSize: '14px', color: '#555' }}>
-                <p>&copy; {new Date().getFullYear()} Ristorante. Tutti i diritti riservati.</p>
-            </footer>
         </div>
     );
-}
+};
 
 export default Home;

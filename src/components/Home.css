@@ -1,26 +1,62 @@
 .home-container {
-    background-color: #f8f9fa; /* Colore di sfondo chiaro */
-    color: #333; /* Colore del testo scuro */
-    font-family: 'Arial', sans-serif; /* Font di default */
+    text-align: center;
+    padding: 20px;
 }
 
-.home-container h1 {
-    font-size: 2.5rem; /* Grandezza del titolo */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.home-container p {
-    font-size: 1.2rem; /* Grandezza del paragrafo */
+.carousel-image {
+    width: 100%;
+    border-radius: 10px;
 }
 
-.action-links button {
-    background-color: #dc3545; /* Colore rosso */
-    color: white; /* Colore del testo bianco */
-    border: none; /* Nessun bordo */
-    border-radius: 5px; /* Angoli arrotondati */
-    cursor: pointer; /* Puntatore a mano */
-    transition: background-color 0.3s; /* Transizione al cambio colore */
+.carousel-caption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
 }
 
-.action-links button:hover {
-    background-color: #c82333; /* Colore rosso più scuro al passaggio del mouse */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer; */
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.action-links {
+    margin-top: 20px;
+}
+
+.action-button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #555;
 }

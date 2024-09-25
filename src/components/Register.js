@@ -42,6 +42,8 @@ const Register = () => {
                 password
             });
 
+            console.log(response.data);
+
             setSuccessMessage('Registrazione avvenuta con successo! Puoi ora effettuare il login.');
             setErrorMessage(''); // Reset error message
 

@@ -1,0 +1,26 @@
+.home-container {
+    background-color: #f8f9fa; /* Colore di sfondo chiaro */
+    color: #333; /* Colore del testo scuro */
+    font-family: 'Arial', sans-serif; /* Font di default */
+}
+
+.home-container h1 {
+    font-size: 2.5rem; /* Grandezza del titolo */
+}
+
+.home-container p {
+    font-size: 1.2rem; /* Grandezza del paragrafo */
+}
+
+.action-links button {
+    background-color: #dc3545; /* Colore rosso */
+    color: white; /* Colore del testo bianco */
+    border: none; /* Nessun bordo */
+    border-radius: 5px; /* Angoli arrotondati */
+    cursor: pointer; /* Puntatore a mano */
+    transition: background-color 0.3s; /* Transizione al cambio colore */
+}
+
+.action-links button:hover {
+    background-color: #c82333; /* Colore rosso più scuro al passaggio del mouse */
+}

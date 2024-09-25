@@ -1,14 +1,17 @@
-/* Footer.css */
-
 .footer {
     background-color: #f1f1f1; /* Light gray background */
     padding: 20px; /* Padding */
     text-align: center; /* Center text */
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Stick to the bottom */
+    left: 0;
+    width: 100%; /* Full width */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a lifted effect */
 }
 
 .footer-container {
     max-width: 800px; /* Maximum width for footer content */
-    margin: auto; /* Center footer */
+    margin: auto; /* Center footer content */
 }
 
 .footer p {

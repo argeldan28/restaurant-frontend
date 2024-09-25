@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Login.css'; // Importa il file CSS per lo stile
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -14,34 +15,30 @@ const Login = () => {
                 username,
                 password
             });
-            // Supponiamo che il server ritorni un token JWT
             const token = response.data.token; // Adatta in base alla tua risposta del server
-
-            // Salva il token nel localStorage o in un contesto globale
             localStorage.setItem('token', token);
-            setSuccessMessage('Login effettuato con successo!'); // Messaggio di successo
-            setErrorMessage(''); // Resetta il messaggio di errore
-            // Puoi anche reindirizzare l'utente a una pagina diversa dopo il login
-            // window.location.href = '/home'; // Ad esempio, reindirizza alla homepage
+            setSuccessMessage('Login effettuato con successo!');
+            setErrorMessage('');
         } catch (error) {
             console.error("Login error", error);
-            setErrorMessage('Nome utente o password non corretti.'); // Mostra messaggio di errore
-            setSuccessMessage(''); // Resetta il messaggio di successo
+            setErrorMessage('Nome utente o password non corretti.');
+            setSuccessMessage('');
         }
     }
 
     return (
-        <div>
+        <div className="login-container">
             <h2>Login</h2>
-            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>} {/* Mostra messaggio di errore */}
-            {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>} {/* Mostra messaggio di successo */}
-            <form onSubmit={handleLogin}>
+            {errorMessage && <p className="error-message">{errorMessage}</p>}
+            {successMessage && <p className="success-message">{successMessage}</p>}
+            <form onSubmit={handleLogin} className="login-form">
                 <input 
                     type="text" 
                     placeholder="Username" 
                     onChange={(e) => setUsername(e.target.value)} 
                     value={username} 
                     required
+                    className="login-input"
                 />
                 <input 
                     type="password" 
@@ -49,8 +46,9 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)} 
                     value={password} 
                     required
+                    className="login-input"
                 />
-                <button type="submit">Login</button>
+                <button type="submit" className="login-button">Login</button>
             </form>
         </div>
     );

@@ -28,7 +28,7 @@ const Home = () => {
     useEffect(() => {
         const interval = setInterval(nextImage, 3000); // Cambia immagine ogni 3 secondi
         return () => clearInterval(interval); // Pulisci l'intervallo quando il componente viene smontato
-    }, [currentIndex]);
+    }, [nextImage]); // Aggiungi `nextImage` come dipendenza
 
     return (
         <div className="home-container">

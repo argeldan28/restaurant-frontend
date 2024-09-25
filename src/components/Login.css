@@ -1,0 +1,57 @@
+/* Login.css */
+
+.login-container {
+    max-width: 400px; /* Larghezza massima del modulo */
+    margin: auto; /* Centra il modulo nella pagina */
+    padding: 20px; /* Padding interno */
+    background-color: #ffffff; /* Colore di sfondo bianco */
+    border-radius: 10px; /* Bordo arrotondato */
+    
+}
+
+h2 {
+    text-align: center; /* Centra il titolo */
+    color: #333; /* Colore del testo */
+}
+
+.login-form {
+    display: flex; /* Utilizza flexbox per il layout */
+    flex-direction: column; /* Colonne per i campi del modulo */
+}
+
+.login-input {
+    padding: 10px; /* Padding per i campi input */
+    margin: 10px 0; /* Margine tra i campi */
+    border: 1px solid #ddd; /* Bordo grigio chiaro */
+    border-radius: 5px; /* Bordo arrotondato */
+    font-size: 16px; /* Dimensione del testo */
+}
+
+.login-input:focus {
+    border-color: #007bff; /* Colore del bordo al focus */
+    outline: none; /* Rimuovi il contorno */
+}
+
+.login-button {
+    padding: 10px; /* Padding per il bottone */
+    background-color: #8d0606; /* Colore di sfondo blu */
+    color: white; /* Colore del testo */
+    border: none; /* Nessun bordo */
+    border-radius: 5px; /* Bordo arrotondato */
+    font-size: 16px; /* Dimensione del testo */
+    cursor: pointer; /* Cambia il cursore al passaggio */
+}
+
+.login-button:hover {
+    background-color: #8a0000; /* Colore di sfondo al passaggio */
+}
+
+.error-message {
+    color: red; /* Colore rosso per i messaggi di errore */
+    text-align: center; /* Centra il messaggio */
+}
+
+.success-message {
+    color: green; /* Colore verde per i messaggi di successo */
+    text-align: center; /* Centra il messaggio */
+}

@@ -41,19 +41,6 @@
     right: 10px;
 }
 
-.action-links {
-    margin-top: 20px;
-}
-
-.action-button {
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 footer {
     margin-top: 40px;

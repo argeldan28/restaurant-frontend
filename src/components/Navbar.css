@@ -1,44 +1,68 @@
-/* Navbar.css */
-
+/* Stile generale del navbar */
 .navbar {
-    background-color: #8d0606; /* Bootstrap primary color */
-    padding: 10px 20px; /* Padding */
-    position: sticky; /* Enable sticky positioning */
-    top: 0; /* Stick to the top of the viewport */
-    z-index: 1000; /* Ensure it is above other content */
+    background-color: #8d0606; /* Colore di sfondo */
+    padding: 10px 20px;
+    position: sticky; /* Resta fisso in cima quando si scorre */
+    top: 0;
+    z-index: 1000; /* Sopra gli altri elementi */
+    width: 100%;
 }
 
+/* Contenitore del navbar */
 .navbar-container {
     display: flex;
-    justify-content: space-between; /* Space between logo and menu */
-    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Spaziatura tra logo, menu e pulsante */
+    align-items: center; /* Allinea verticalmente gli elementi */
+    max-width: 1200px; /* Larghezza massima */
+    margin: 0 auto; /* Centra il contenuto */
 }
 
+/* Logo a sinistra */
 .navbar-logo {
-    color: white; /* Logo color */
-    font-size: 24px; /* Logo font size */
-    text-decoration: none; /* Remove underline */
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 100px;
 }
 
+/* Menu centrale */
 .navbar-menu {
-    list-style: none; /* Remove bullets */
-    display: flex; /* Display items in a row */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    justify-content: center; /* Center the list items horizontally */
-    flex-grow: 1; /* Allow menu to take available space */
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Spazio tra i link */
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-menu li {
-    margin-left: 20px; /* Space between menu items */
+    list-style: none;
 }
 
 .navbar-link {
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Smooth color transition */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
 }
 
 .navbar-link:hover {
-    color: #eeadad; /* Darker blue on hover */
+    color: #ffd700; /* Colore del testo al passaggio */
+}
+
+/* Pulsante Order Now a destra */
+.order-now-btn {
+    padding: 10px 20px;
+    background-color: white;
+    color: #8d0606;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 100px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.order-now-btn:hover {
+    background-color: #660606;
+    color: white;
 }

@@ -32,19 +32,34 @@ const Home = () => {
 
     return (
         <div className="home-container">
-            <h1>Benvenuto nel Ristorante!</h1>
-            <p>Scopri i nostri piatti deliziosi e goditi un'esperienza culinaria unica.</p>
+            {/* <h1>Benvenuto nel Ristorante!</h1>
+            <p>Scopri i nostri piatti deliziosi e goditi un'esperienza culinaria unica.</p> */}
+            <img src='top.jpg' className='top-img'/>
             
-            {/* Carousel senza controlli manuali */}
-            <div className="carousel">
-                <img
-                    src={images[currentIndex].src}
-                    alt={`Slide ${currentIndex + 1}`}
-                    className="carousel-image"
-                />
-                {/* Mostra il testo della didascalia se necessario */}
-                {/* <p className="carousel-caption">{images[currentIndex].caption}</p> */}
+            {/* Div per il carosello e il testo, posizionati in una riga */}
+            <div className="carousel-and-info">
+                <div className="carousel">
+                    <img
+                        src={images[currentIndex].src}
+                        alt={`Slide ${currentIndex + 1}`}
+                        className="carousel-image"
+                    />
+                </div>
+                
+                <div className="info-text">
+                    <p>
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <br />
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
             </div>
+
+            <div className='second-img'>
+                <img src='spaghetti.jpg' alt='Spaghetti'></img>
+            </div>
+
         </div>
     );
 };

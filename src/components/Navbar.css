@@ -1,12 +1,14 @@
 /* Stile generale del navbar */
 .navbar {
     background-color: #8d0606; /* Colore di sfondo */
-    padding: 10px 20px;
+    padding: 50px 20px;
+    padding-top: 50px;
     position: sticky; /* Resta fisso in cima quando si scorre */
     top: 0;
     z-index: 1000; /* Sopra gli altri elementi */
     width: 100%;
 }
+
 
 /* Contenitore del navbar */
 .navbar-container {

@@ -1,13 +1,23 @@
 .home-container {
     text-align: center;
-    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Disporre h1, p e i due div in colonna */
+    align-items: center; /* Centra il contenuto orizzontalmente */
+    
+}
+
+.carousel-and-info {
+    display: flex;
+    justify-content: space-between; /* Spazio tra carousel e il testo */
+    width: 100%;
+    max-width: 1200px; /* Limita la larghezza massima */
+    margin: 200px 0;
 }
 
 .carousel {
-    position: relative;
-    width: 100%;
+    width: 50%; /* Il carosello occuperà il 50% della riga */
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 20px;
 }
 
 .carousel-image {
@@ -15,35 +25,35 @@
     border-radius: 10px;
 }
 
-.carousel-caption {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #555;
-}
-
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    /* background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-size: 24px;
-    padding: 10px;
-    cursor: pointer; */
-}
-
-.carousel-control.prev {
-    left: 10px;
-}
-
-.carousel-control.next {
-    right: 10px;
+.info-text {
+    width: 50%; /* Il testo occuperà il 50% della riga */
+    margin: 0 20px;
+    text-align: left; /* Allinea il testo a sinistra */
 }
 
 
-footer {
-    margin-top: 40px;
-    font-size: 14px;
-    color: #555;
+
+.top-img{
+    position: relative; /* Posiziona l'immagine in modo che rimanga sempre visibile */
+    top: 0;          /* Allinea l'immagine al top */
+    left: 0;         /* Allinea l'immagine al lato sinistro */
+    width: 100vw;    /* 100% della larghezza della finestra */
+    height: 100vh;   /* 100% dell'altezza della finestra */
+    object-fit: cover; /* Adatta l'immagine per coprire tutto lo schermo senza distorsioni */
+    z-index: -1;     /* Assicura che l'immagine resti sotto il contenuto */
+}
+
+.second-img {
+    width: 100vw;    /* Mantieni l'immagine sempre larga quanto la finestra */
+    height: auto;    /* Lascia che l'altezza si adatti automaticamente alla larghezza */
+    display: block;  /* Assicura che l'immagine occupi una nuova linea */
+    margin: 0 auto;  /* Centra l'immagine orizzontalmente */
+    overflow: hidden; /* Nasconde eventuali parti dell'immagine che escono dai limiti */
+}
+
+.second-img img {
+    width: 100%;
+    height: 100vh;   /* Mantieni l'altezza dell'immagine al 100% della finestra */
+    object-fit: cover; /* Copri tutta l'area visibile senza distorcere l'immagine */
+    object-position: center; /* Centra l'immagine nel suo contenitore */
 }

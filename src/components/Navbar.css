@@ -24,13 +24,15 @@
     text-decoration: none;
     font-weight: bold;
     margin-right: 100px;
+    position: absolute;
+    left: 50px;
 }
 
 /* Menu centrale */
 .navbar-menu {
     list-style: none;
     display: flex;
-    gap: 30px; /* Spazio tra i link */
+    gap: 50px; /* Spazio tra i link */
     margin: 0;
     padding: 0;
 }
@@ -52,17 +54,25 @@
 
 /* Pulsante Order Now a destra */
 .order-now-btn {
-    padding: 10px 20px;
+    position: absolute;
+    right: 10px;
+    height: 40px;
+    width: 180px;
+    padding: 10px;
     background-color: white;
     color: #8d0606;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 100px;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra orizzontalmente */
 }
 
 .order-now-btn:hover {
     background-color: #660606;
     color: white;
+    
 }

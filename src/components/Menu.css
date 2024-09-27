@@ -27,11 +27,12 @@
 }
 
 .menu-image {
-    width: 100px; /* Adjusted width for better proportion */
-    height: 100px; /* Adjusted height for better proportion */
-    margin-right: 20px; /* Space between image and text */
-    border-radius: 8px; /* Rounded corners for images */
-    object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+    width: 100px; /* Dimensione fissa */
+    height: 100px; /* Dimensione fissa */
+    margin-right: 20px;
+    border-radius: 8px;
+    object-fit: cover; /* Mantieni le proporzioni, ma riempi l'area */
+    display: block; /* Assicurati che siano trattate come blocchi */
 }
 
 .menu-item h3 {

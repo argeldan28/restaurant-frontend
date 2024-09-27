@@ -5,7 +5,7 @@
     position: relative; /* Fixed position */
     bottom: 0; /* Stick to the bottom */
     left: 0;
-    width: 100%; /* Full width */
+    width: 100vw; /* Full width */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a lifted effect */
 }
 
